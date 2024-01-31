@@ -11,20 +11,20 @@ import java.util.Scanner;
 	        String[] hands = {"グー", "チョキ", "パー"};
 
 	        System.out.println("じゃんけんゲームへようこそ！");
-	        System.out.println("あなたの選択（グー、チョキ、またはパー）を入力してください:");
+	        System.out.println("あなたの選択（グー、チョキ、パー）のどれかを入力してください:");
 	        String player = scanner.nextLine();
 
-	        int コンピュータの選択インデックス = random.nextInt(hands.length);
-	        String コンピュータの選択 = hands[コンピュータの選択インデックス];
+	        int cpu = random.nextInt(hands.length);
+	        String cpuchoice = hands[cpu];
 
-	        System.out.println("コンピュータの選択: " + コンピュータの選択);
+	        System.out.println("コンピュータの選択: " + cpuchoice);
 	        System.out.println("あなたの選択: " + player);
 
-	        if (player.equals(コンピュータの選択)) {
+	        if (player.equals(cpuchoice)) {
 	            System.out.println("引き分けです！");
-	        } else if ((player.equals("グー") && コンピュータの選択.equals("チョキ")) ||
-	                   (player.equals("チョキ") && コンピュータの選択.equals("パー")) ||
-	                   (player.equals("パー") && コンピュータの選択.equals("グー"))) {
+	        } else if ((player.equals("グー") && cpuchoice.equals("チョキ")) ||
+	                   (player.equals("チョキ") && cpuchoice.equals("パー")) ||
+	                   (player.equals("パー") && cpuchoice.equals("グー"))) {
 	            System.out.println("あなたの勝ちです！");
 	        } else {
 	            System.out.println("コンピュータの勝ちです！");
