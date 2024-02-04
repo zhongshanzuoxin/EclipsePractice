@@ -12,7 +12,6 @@ public class practice {
 		double totalprice = time / 30.0;
 		
 		System.out.println("支払い料金は" + (int)(Math.ceil(totalprice)) * price + "円です");
-
-	}
-
+	
+    }
 }
